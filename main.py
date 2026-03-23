@@ -1,5 +1,5 @@
 import poems
-import sign
+import messages
 from poems import TARAS,POEMS
 name = "іван"
 result = sign.NAME_TEMPLE.format(fullname=name)
