@@ -4,7 +4,9 @@ from poems import TARAS,POEMS
 name = "іван"
 result = sign.NAME_TEMPLE.format(fullname=name)
 print(result)
-drems = "менше дз\nбільше шуток\n"
-print(drems)
+dreams = "менше дз\nбільше шуток\n"
+print(dreams)
 stars = "**************************************************************************"
 print(stars)
+print(TARAS)
+print(POEMS)
