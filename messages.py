@@ -1,0 +1,5 @@
+NAME_TEMPLE = "Іван. {fullname}"
+MSG_INPUT_WATER_NUMBER = "Ввекдіть кількість води (цілим числом пляшок) для купівлі: "
+MSG_CORRECT_INPUT = "дані введено коректно )"
+MSG_INCORRECT_INPUT = "Are you nuts? Read input mess"
+MSG_FINISH = "FINISH"

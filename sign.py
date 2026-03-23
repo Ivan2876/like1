@@ -1,1 +1,0 @@
-NAME_TEMPLE = "Іван. {fullname}"
