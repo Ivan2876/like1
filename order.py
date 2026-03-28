@@ -31,7 +31,7 @@ print(f"{total_count}")
 
 n1= 4
 if n1 < int(person_number):
-    discounts=0.05
+    discounts=0.5
 else:
     discounts=0
 discounts_sume = (1-discounts) * int(total_count)
