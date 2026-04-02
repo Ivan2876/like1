@@ -29,12 +29,13 @@ person_number = person_input.strip()
 total_count = cost_one_person * int(person_number)
 print(f"{total_count}")
 
-n1= 4
-if n1 < int(person_number):
-    discounts=0.5
-else:
-    discounts=0
-discounts_sume = (1-discounts) * int(total_count)
-total_price=discounts_sume
+DISCOUNT_PERCENTAGE = 0.05
+DISCOUNT_TRIGER_SUME = 5
 
-print(letter.LETTER_TEMPLATE.format(name=name,date=date,persons=persons,price_per_person=cost_one_person,total_price=total_price,discount=discounts,final_price=total_price))
+discount = 0
+if int(person_number) > DISCOUNT_TRIGER_SUME:
+    discount = int(total_count * DISCOUNT_PERCENTAGE)
+
+total_price=total_count - discount
+
+print(letter.LETTER_TEMPLATE.format(name=name,date=date,persons=persons,price_per_person=cost_one_person,total_price=total_price,discount=discount,final_price=total_price))
