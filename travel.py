@@ -29,7 +29,6 @@ total_count_people = quantity_student + quantity_teacher
 if transport_choice == 'Bus':
     bus_need = total_count_people / 40
 bus_needs = round(bus_need)
-print(bus_needs)
 
 if transport_choice == 'train':
     transport_cost = total_count_people * travelcost.COST_TRAIN_PER_ONE_PERSON
