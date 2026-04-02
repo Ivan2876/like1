@@ -21,9 +21,7 @@ put_markdown("## Питання")
 quantity_student = slider("How student going?", min_value=1,max_value=60,value=30, step=1)
 quantity_teacher = slider("How teacher going?", min_value=1,max_value=15,value=8, step=1)
 transport_choice = select("What transport you choice",['Bus','train'])
-days_live = slider("How days you will live?",min_value=0,max_value=100,value=50, step=1)
-if days_live <= travelcost.NULL:
-    days_live = "Без проживання"
+days_live = slider("How days you will live?",min_value=1,max_value=100,value=50, step=1)
 
 #calculation
 
