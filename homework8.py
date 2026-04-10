@@ -10,12 +10,12 @@ for number in even_numbers:
     doubled_even.append(number * 2)
 
 
-print(even_numbers,'-числа помножені на 2')
+print(doubled_even,'-числа помножені на 2')
 
-who_have_eight = 8 in even_numbers
-if 8 in even_numbers:
-    even_numbers.remove(8)
-print(even_numbers,'-фінальна версія')
+who_have_eight = 8 in doubled_even
+if 8 in doubled_even:
+    doubled_even.remove(8)
+print(doubled_even,'-фінальна версія')
 
 words = ["apple", "banana", "kiwi", "pear", "banana", "plum"]
 unique_words = set(words)
