@@ -17,7 +17,6 @@ RAV4 = {
 
 RAV4["Maximum_permissible_trailer_weight_with_brakes_kg"] = 800
 
-
 name = RAV4["model"]
 print(name)
 cost = RAV4["cost_grn"]
