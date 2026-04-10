@@ -8,15 +8,19 @@ print(smallest_number, '-найменше число ')
 sume_number = 0
 for number in numbers:
     sume_number = sume_number + number
-    sume_numbers = sume_number + 0
-print(sume_numbers,'сума всіх чисел')
+
+print(sume_number,'сума всіх чисел')
 #task2
 snows = [10, 8, 12, 7, 9]
 sume_number2 = 0
 for snow in snows:
     sume_number2 = sume_number2 + snow
-sume_number3 = sume_number2 / 5
-print(sume_number3,'-середній бал')
-snows.sort()
-numbers_bigger_normal = snows[3:5]
+
+average = sume_number2 / len(snows)
+print(average,'-середній бал')
+
+numbers_bigger_normal = []
+for snow in snows:
+    if snow > average:
+        numbers_bigger_normal.append(snow)
 print(numbers_bigger_normal,'-оцінки вище середього')
