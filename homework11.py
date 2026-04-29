@@ -1,0 +1,28 @@
+import requests
+from pprint import pprint
+
+url = 'https://script.google.com/macros/s/AKfycbxZ4Kq38WtZ6DRhkb_w5u3MfZr_X11pXt67tkTM1y3bR_HxLWIfe_p2_ael9bVVYoCSLg/exec'
+response = requests.get(url=url, params={})
+response_json = response.json()
+
+pprint(response_json)
+search_text = 'Так'
+animals = response_json['animals']
+the_cost_of_caring_for_poisonous_animals = 0
+how_many_African_animals_are_currently_in_the_zoo = 0
+searche_text = 'Африка'
+
+for animal in animals:
+    care_cost = animal['Care_cost']
+    count = animal['Count']
+    if searche_text == animal['Continent']:
+        how_many_African_animals_are_currently_in_the_zoo += count
+
+    if search_text in animal['Is_venomous']:
+        the_cost_of_caring_for_poisonous_animals += care_cost * count
+
+
+print(how_many_African_animals_are_currently_in_the_zoo,'-скільки африканських тварин наразі в зоопарку')
+print(the_cost_of_caring_for_poisonous_animals,'-вартість догляду за отруйними тваринами')
+
+
