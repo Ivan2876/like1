@@ -1,1 +1,3 @@
-tryyyyyyyyyy1111111111
+norm==100
+lalala==20
+tryyyyyyyyyy1111111111=1,56
