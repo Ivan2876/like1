@@ -20,6 +20,6 @@ the_number_is_even_and_greater_than_ten_wrong = foo(something=15)
 print(the_number_is_even_and_greater_than_ten_wrong)
 
 
-def foo(text: str,) -> str | int | float:
+def foo(text: str,) -> str:
     return text
 
