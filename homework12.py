@@ -21,10 +21,10 @@ print(the_number_is_even_and_greater_than_ten_wrong)
 
 def vowels(text: str,) -> int:
     wabls = "aeiouy"
-    text = text.lower()
+    texts = text.lower()
     counter = 0
-    for letter in text:
-        if letter in wabls:
+    for text in texts:
+        if text in wabls:
             counter += 1
     return counter
 
