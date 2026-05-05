@@ -1,4 +1,3 @@
-from homework11 import count
 
 
 def average(numbner1, numbner2, numbner3,arguments_number) -> int | float:
@@ -20,6 +19,14 @@ the_number_is_even_and_greater_than_ten_wrong = foo(something=15)
 print(the_number_is_even_and_greater_than_ten_wrong)
 
 
-def foo(text: str,) -> str:
-    return text
+def vowels(text: str,) -> int:
+    wabls = "aeiouy"
+    text = text.lower()
+    counter = 0
+    for letter in text:
+        if letter in wabls:
+            counter += 1
+    return counter
 
+get_many_vowels_are_there_in_a_row = vowels('aeiou')
+print(get_many_vowels_are_there_in_a_row)
