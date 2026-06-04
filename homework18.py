@@ -1,56 +1,65 @@
 from abc import ABC, abstractmethod
 from typing import Self
 
+
 class Transport(ABC):
     def __init__(self, fuel: int, condition: int):
         self.fuel = fuel
         self.condition = condition
+
     @property
-    def is_working (self):
+    def is_working(self):
         return self.condition > 5
 
     @abstractmethod
     def __str__(self) -> str:
         return ''
 
-    def move (self,distance):
+    def move(self, distance):
         if not self.fuel > 0 or not self.condition > 10:
             return print("рух неможливий")
 
         if self.fuel > 0 and self.condition > 10:
             self.fuel -= round(distance / 2)
             self.condition -= round(distance / 6)
-            return print(f"ви проїхали {distance} кілометрів,і в вас залишилося {self.fuel} літрів пального і стан транспорту {self.condition} зі 100")
+            return print(
+                f"ви проїхали {distance} кілометрів,і в вас залишилося {self.fuel} літрів пального і стан транспорту {self.condition} зі 100")
+
 
 class ServiceStation:
-    def repair(self,transport_unit: Transport):
+    def repair(self, transport_unit: Transport):
         condition_max = 100
         transport_unit.condition = condition_max
 
+
 class Car(Transport):
-    def __init__(self, model: str,fuel: int = 50, condition: int = 100,):
+    def __init__(self, model: str, fuel: int = 50, condition: int = 100, ):
         super().__init__(fuel, condition)
         self.model = model
 
     def __str__(self):
-        return print(f"у транспорті є {self.fuel} літрів пального, його стан {self.condition} зі 100, і його модель: {self.model}")
+        return print(
+            f"у транспорті є {self.fuel} літрів пального, його стан {self.condition} зі 100, і його модель: {self.model}")
 
 
 class Truck(Transport):
-    def __init__(self, model: str,fuel: int = 120, condition: int = 100):
+    def __init__(self, model: str, fuel: int = 120, condition: int = 100):
         super().__init__(fuel, condition)
         self.model = model
+
     def __str__(self):
-            return print(f"у транспорті є {self.fuel} літрів пального, його стан {self.condition} зі 100, і його модель: {self.model}")
+        return print(
+            f"у транспорті є {self.fuel} літрів пального, його стан {self.condition} зі 100, і його модель: {self.model}")
 
 
 class Motorcycle(Transport):
-    def __init__(self, model: str,fuel: int = 20, condition: int = 100):
+    def __init__(self, model: str, fuel: int = 20, condition: int = 100):
         super().__init__(fuel, condition)
         self.model = model
-    def __str__(self):
-        return print(f"у транспорті є {self.fuel} літрів пального, його стан {self.condition} зі 100, і його модель: {self.model}")
 
+    def __str__(self):
+        return print(
+            f"у транспорті є {self.fuel} літрів пального, його стан {self.condition} зі 100, і його модель: {self.model}")
 
 
 car = Car(model="BMW")
