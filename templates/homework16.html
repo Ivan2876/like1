@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Нове повідомлення</title>
+</head>
+<body style="margin: 0; padding: 0; background-color: #f4f6f8; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; -webkit-font-smoothing: antialiased;">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;">
+        <tr>
+            <td align="center" style="padding: 40px 10px;">
+                <!-- Контейнер листа -->
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px; background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); overflow: hidden;">
+
+                    <!-- Верхня кольорова смуга -->
+                    <tr>
+                        <td style="background: linear-gradient(135deg, #4f46e5, #6366f1); padding: 35px 40px; text-align: left;">
+                            <h1 style="margin: 0; color: #ffffff; font-size: 24px; font-weight: 600; letter-spacing: -0.5px;">
+                                Вітаємо, {{ name }}! 👋
+                            </h1>
+                        </td>
+                    </tr>
+
+                    <!-- Основний вміст -->
+                    <tr>
+                        <td style="padding: 40px;">
+                            <p style="margin: 0 0 20px 0; font-size: 16px; line-height: 1.6; color: #334155;">
+                                Ви отримали новий текстовий рядок для аналізу. Ось деталі вашого запиту:
+                            </p>
+
+                            <!-- Блок із текстом користувача -->
+                            <div style="background-color: #f8fafc; border-left: 4px solid #4f46e5; padding: 20px; margin-bottom: 30px; border-radius: 0 8px 8px 0;">
+                                <p style="margin: 0 0 8px 0; font-size: 12px; font-weight: 700; text-transform: uppercase; color: #64748b; letter-spacing: 1px;">Ваш рядок:</p>
+                                <p style="margin: 0; font-size: 16px; color: #1e293b; font-style: italic; word-break: break-word;">
+                                    "{{ string }}"
+                                </p>
+                            </div>
+
+                            <!-- Статистика / Кількість слів -->
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-top: 1px solid #e2e8f0; padding-top: 20px;">
+                                <tr>
+                                    <td>
+                                        <span style="font-size: 15px; color: #64748b;">Загальна кількість слів:</span>
+                                        <span style="font-size: 18px; font-weight: 700; color: #4f46e5; margin-left: 8px;">
+                                            {{ string_long }}
+                                        </span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Підвал листа (Footer) -->
+                    <tr>
+                        <td style="background-color: #f8fafc; padding: 24px 40px; text-align: center; border-top: 1px solid #f1f5f9;">
+                            <p style="margin: 0; font-size: 13px; color: #94a3b8;">
+                                Це автоматичне повідомлення від системи Homework 16.
+                            </p>
+                        </td>
+                    </tr>
+
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
