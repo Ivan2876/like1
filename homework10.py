@@ -24,8 +24,8 @@ for recipe in recipes:
     if caloriesPerServing > the_most_caloric_dish:
         the_most_caloric_dish = caloriesPerServing
         the_most_caloric_dish_name = recipe['name']
-        reviewCount = recipe['reviewCount']
-        how_many_views_have_there_been_for_all_recipes += reviewCount
+    reviewCount = recipe['reviewCount']
+    how_many_views_have_there_been_for_all_recipes += reviewCount
 
     if needs_tempreg in instructions[0]:
         which_foods_are_cooked_at_what_temperature_190.append(recipe)
